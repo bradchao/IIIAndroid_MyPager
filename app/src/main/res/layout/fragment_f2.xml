@@ -18,6 +18,8 @@
         android:id="@+id/flipper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inAnimation="@anim/downup_show"
+        android:outAnimation="@anim/downup_hide"
         >
         <ImageView
             android:layout_width="wrap_content"
