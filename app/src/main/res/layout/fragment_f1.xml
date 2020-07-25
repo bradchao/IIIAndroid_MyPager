@@ -13,4 +13,17 @@
         android:text="F1"
         android:textSize="36sp"
         />
+    <Button
+        android:id="@+id/f1_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test1"
+        />
+    <TextView
+        android:id="@+id/f1_mesg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        />
+
 </LinearLayout>

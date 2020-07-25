@@ -4,22 +4,39 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link F1#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class F1 extends Fragment {
-
+    private View mainView;
+    private Button btn;
+    private TextView mesg;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f1, container, false);
+        if (mainView == null) {
+            mainView = inflater.inflate(R.layout.fragment_f1, container, false);
+            btn = mainView.findViewById(R.id.f1_btn);
+            mesg = mainView.findViewById(R.id.f1_mesg);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    createLotto();
+                }
+            });
+        }
+        return mainView;
     }
+
+    private void createLotto(){
+        int rand = (int)(Math.random()*38+1);
+        mesg.setText(rand + "");
+    }
+
+
 }
