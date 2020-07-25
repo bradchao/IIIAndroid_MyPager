@@ -65,9 +65,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoF1(View view) {
+        viewPager.setCurrentItem(1);
     }
     public void gotoF2(View view) {
+        viewPager.setCurrentItem(2);
     }
     public void gotoF3(View view) {
+        viewPager.setCurrentItem(3);
     }
 }
